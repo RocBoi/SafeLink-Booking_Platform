@@ -3,43 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="StageLink is the official booking platform for Hip-Hop, R&B, and live performance artists. Book now or host webcam fan sessions." />
-  <meta property="og:title" content="StageLink - Book Live Talent & Engage Fans" />
-  <meta property="og:description" content="Live club + venue artist booking, paid fan webcam requests, and listening parties." />
+  <meta name="description" content="StageLink - Official booking platform for Hip-Hop and R&B artists with live fan experiences." />
+  <meta property="og:title" content="StageLink - Book Artists & Connect Live" />
+  <meta property="og:description" content="Artist-only performance booking and webcam fan experiences." />
   <meta property="og:image" content="/public/img/stagelink-cover.jpg" />
   <meta property="og:url" content="https://stagelink.live" />
   <meta name="twitter:card" content="summary_large_image" />
-  <title>StageLink – Book Artists & Schedule Events</title>
+  <title>StageLink – Book Artists & Schedule Fan Experiences</title>
   <link rel="stylesheet" href="/styles/main.css" />
   <style>
     body {
       background: linear-gradient(to right, #0d1b2a, #1b263b);
       color: #e0e1dd;
+      font-family: Arial, sans-serif;
     }
     header, footer {
       background-color: #1b263b;
       color: #e0e1dd;
+      text-align: center;
+      padding: 1rem;
     }
     nav a {
       color: #61dafb;
       margin: 0 1rem;
       text-decoration: none;
+      font-weight: bold;
     }
-    .artist-card, .booking-card, .webcam-request {
-      background: #415a77;
-      color: #edf2f4;
-      border: 1px solid #778da9;
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
     }
     button {
-      background: #61dafb;
+      background-color: #61dafb;
       color: #0d1b2a;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
     }
     button:hover {
       background-color: #1c8ed4;
-    }
-    input, select, textarea {
-      background: #1e2a38;
-      color: #fff;
     }
   </style>
 </head>
@@ -48,70 +52,28 @@
   <header>
     <h1>StageLink</h1>
     <nav>
-      <a href="#artists">Artists</a>
-      <a href="#book">Book</a>
-      <a href="#webcam">Webcam</a>
+      <a href="/artists/index.html">Artists</a>
+      <a href="/booking/index.html">Book</a>
+      <a href="/webcam/index.html">Webcam</a>
     </nav>
   </header>
 
   <main>
-    <section id="hero">
+    <section class="hero">
       <h2>Where Artists Get Booked & Fans Get Closer</h2>
-      <p>Hip-Hop | R&B | Spoken Word | Rock | Blues</p>
+      <p>Official platform for Hip-Hop, R&B, and Indie talent bookings.</p>
+      <button onclick="window.location.href='/booking/index.html'">Book an Artist</button>
     </section>
 
-    <section id="artists">
-      <h3>Featured Artists</h3>
-      <div class="artist-grid">
-        <!-- JS dynamically adds artist cards here -->
-      </div>
-    </section>
-
-    <section id="book">
-      <h3>Book an Artist or Live Venue</h3>
-      <form id="bookingForm">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        
-        <select required>
-          <option disabled selected>Choose Genre</option>
-          <option>Hip-Hop</option>
-          <option>R&B</option>
-          <option>Spoken Word</option>
-          <option>Rock</option>
-        </select>
-
-        <select required>
-          <option disabled selected>Choose Venue or Club</option>
-          <option>Velvet Room, Atlanta</option>
-          <option>Apache Café, Atlanta</option>
-          <option>Tabernacle, ATL</option>
-          <option>Smith’s Olde Bar</option>
-          <option>Private Studio Session</option>
-        </select>
-
-        <label for="bookingDateTime">Select Date and Time</label>
-        <input type="datetime-local" id="bookingDateTime" required />
-
-        <textarea placeholder="Describe the event or performance details" rows="5" required></textarea>
-
-        <button type="submit">Send Booking Request</button>
-      </form>
-    </section>
-
-    <section id="webcam">
-      <h3>Live Fan Webcam Request</h3>
-      <p>Request a 1-on-1 live session with your favorite artist. Requires approval and payment.</p>
-      <button onclick="alert('Login required to submit webcam request.')">Request Chat</button>
+    <section class="hero">
+      <h3>Fan Webcam Interactions</h3>
+      <p>Request a private video session with your favorite performer. Subject to availability and approval.</p>
+      <button onclick="window.location.href='/webcam/index.html'">Request Webcam Access</button>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 StageLink | Created by Marquez Edward Ross</p>
+    <p>&copy; 2025 StageLink | Built by Marquez Edward Ross</p>
   </footer>
-
-  <script src="/scripts/formHandler.js"></script>
-  <script src="/scripts/artistLoader.js"></script>
-  <script src="/scripts/calendar.js"></script>
 </body>
 </html>
