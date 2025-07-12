@@ -1,22 +1,32 @@
 // src/scripts/formHandler.js
 
-document.addEventListener('DOMContentLoaded', function () {
-  const bookingForm = document.querySelector('form');
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('form');
+  if (!form) return;
 
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', function (e) {
-      e.preventDefault();
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
-      const data = {
-        name: bookingForm.querySelector('input[type="text"]').value,
-        email: bookingForm.querySelector('input[type="email"]').value,
-        genre: bookingForm.querySelector('select').value,
-        description: bookingForm.querySelector('textarea').value
-      };
+    console.log('Booking submission:', data);
 
-      console.log('Booking submitted:', data);
-      alert('Booking request sent!');
-      bookingForm.reset();
-    });
-  }
+    try {
+      // Optional: replace with your endpoint URL
+      const res = await fetch('/api/booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (res.ok) {
+        alert('Booking request sent!');
+        form.reset();
+      } else {
+        alert('There was an issue submitting your booking.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Submission failed. Please try again.');
+    }
+  });
 });
