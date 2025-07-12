@@ -3,42 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="StageLink - Official booking platform for Hip-Hop and R&B artists with live fan experiences." />
-  <meta property="og:title" content="StageLink - Book Artists & Connect Live" />
-  <meta property="og:description" content="Artist-only performance booking and webcam fan experiences." />
+  <meta name="description" content="StageLink – Book top artists, explore talent, and schedule private fan experiences." />
+  <meta property="og:title" content="StageLink - Book Artists & Go Live" />
+  <meta property="og:description" content="Secure artist booking, fan interaction webcam requests, and artist discovery." />
   <meta property="og:image" content="/public/img/stagelink-cover.jpg" />
   <meta property="og:url" content="https://stagelink.live" />
   <meta name="twitter:card" content="summary_large_image" />
-  <title>StageLink – Book Artists & Schedule Fan Experiences</title>
+  <title>StageLink – Book Artists, Watch, Interact</title>
   <link rel="stylesheet" href="/styles/main.css" />
   <style>
     body {
       background: linear-gradient(to right, #0d1b2a, #1b263b);
       color: #e0e1dd;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
     }
     header, footer {
       background-color: #1b263b;
-      color: #e0e1dd;
-      text-align: center;
       padding: 1rem;
+      text-align: center;
+      color: #e0e1dd;
+    }
+    nav {
+      margin-top: 0.5rem;
     }
     nav a {
-      color: #61dafb;
       margin: 0 1rem;
       text-decoration: none;
+      color: #61dafb;
       font-weight: bold;
     }
-    .hero {
+    .section {
       text-align: center;
       padding: 2rem 1rem;
+    }
+    .section h2 {
+      color: #61dafb;
     }
     button {
       background-color: #61dafb;
       color: #0d1b2a;
       padding: 0.75rem 1.5rem;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       font-weight: bold;
       cursor: pointer;
     }
@@ -59,21 +67,27 @@
   </header>
 
   <main>
-    <section class="hero">
-      <h2>Where Artists Get Booked & Fans Get Closer</h2>
-      <p>Official platform for Hip-Hop, R&B, and Indie talent bookings.</p>
-      <button onclick="window.location.href='/booking/index.html'">Book an Artist</button>
+    <section class="section">
+      <h2>Book Live Artists</h2>
+      <p>Official booking for Hip-Hop, R&B, and Indie performers.</p>
+      <button onclick="window.location.href='/booking/index.html'">Go to Booking</button>
     </section>
 
-    <section class="hero">
-      <h3>Fan Webcam Interactions</h3>
-      <p>Request a private video session with your favorite performer. Subject to availability and approval.</p>
-      <button onclick="window.location.href='/webcam/index.html'">Request Webcam Access</button>
+    <section class="section">
+      <h2>Browse Artists</h2>
+      <p>Meet our featured talents and discover new voices in the culture.</p>
+      <button onclick="window.location.href='/artists/index.html'">View Artists</button>
+    </section>
+
+    <section class="section">
+      <h2>Request Fan Webcam</h2>
+      <p>Private 1-on-1 video experiences, artist-approved and secure.</p>
+      <button onclick="window.location.href='/webcam/index.html'">Request Webcam</button>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 StageLink | Built by Marquez Edward Ross</p>
+    <p>&copy; 2025 StageLink | Designed by Marquez Edward Ross</p>
   </footer>
 </body>
 </html>
