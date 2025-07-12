@@ -13,8 +13,9 @@ const artists = [
   }
 ];
 
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.artist-grid');
+  if (!grid) return;
 
   artists.forEach(artist => {
     const card = document.createElement('div');
@@ -23,7 +24,6 @@ window.addEventListener('DOMContentLoaded', () => {
       <img src="${artist.image}" alt="${artist.name}" class="artist-img" />
       <h4>${artist.name}</h4>
       <p>Genre: ${artist.genre}</p>
-      <a href="#book">Book Now</a>
     `;
     grid.appendChild(card);
   });
