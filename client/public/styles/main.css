@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+header, footer {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: #ffa500;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 2rem;
+}
+
+.artist-card, .booking-card, .webcam-request {
+  background: #222;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.artist-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+form input, form select, form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: none;
+  background: #333;
+  color: #fff;
+}
+
+button {
+  background: #ffa500;
+  color: #121212;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff8c00;
+}
